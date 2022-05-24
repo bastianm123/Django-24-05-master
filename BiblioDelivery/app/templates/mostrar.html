@@ -28,9 +28,9 @@
     </div>
     <div >
         <table border=1>
-            <tr><td>Codigo</td><td>Nombre</td><td>Precio</td>   <td>Modificar</td><td>Eliminar</td></tr>
+            <tr><td>Codigo</td><td>Nombre</td><td>Precio</td><td>Categoria</td><td>Modificar</td><td>Eliminar</td></tr>
             {% for v in producto %}
-            <tr><td>{{v.codigoProducto}}</td><td>{{v.nombreProducto}}</td><td>{{v.precioProducto}}</td>
+            <tr><td>{{v.codigoProducto}}</td><td>{{v.nombreProducto}}</td><td>{{v.precioProducto}}</td><td>{{v.categoriaProducto}}</td>
             <td><a href="{% url 'form_mod_producto' v.codigoProducto %}">Modificar</a></td>
             <td><a href="{% url 'form_del_producto' v.codigoProducto %}"><button type="button" class="btn btn-danger" onclick="return confirmarEliminar()">Eliminar</button></a></td>
             </tr>
